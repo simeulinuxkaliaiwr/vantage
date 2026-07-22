@@ -3,6 +3,8 @@
 A floating-pill Quickshell rice for Hyprland. pywal-driven color
 sync across Hyprland, foot, zsh, and (optionally) [qutebrowser](https://qutebrowser.org)
 
+<img width="1920" height="1080" alt="pasted file" src="https://github.com/user-attachments/assets/5b599d2f-480a-4604-a51f-11dfb904e9dc" />
+
 ## Requirements
 
 Core:
@@ -62,10 +64,12 @@ exec_once = { "qs -c vantage" }
 If you'd rather skip the script:
 
 ```bash
-cp -r vantage ~/.config/quickshell/vantage
+cp -r ~/vantage-src ~/.config/quickshell/vantage
 chmod +x ~/.config/quickshell/vantage/scripts/*.sh
 chmod +x ~/.config/quickshell/vantage/launch.sh
 chmod +x ~/.config/quickshell/vantage/restart-rice.sh
+mkdir --parents $HOME/.config/cava
+cp ~/vantage-src/cava-config-rice $HOME/.config/cava/cava-config-rice
 qs -c vantage
 ```
 
