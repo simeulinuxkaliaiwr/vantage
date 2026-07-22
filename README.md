@@ -1,17 +1,15 @@
 # Vantage
 
-A floating-pill Quickshell rice for Hyprland. Glass bar, morphing
-panels (the bar itself grows into the launcher/volume/power/wallpaper
-picker instead of popping a separate window), pywal-driven color
-sync across Hyprland, foot, zsh, and (optionally) qutebrowser.
+A floating-pill Quickshell rice for Hyprland. pywal-driven color
+sync across Hyprland, foot, zsh, and (optionally) [qutebrowser](https://qutebrowser.org)
 
 ## Requirements
 
 Core:
-- [Hyprland](https://hyprland.org/) with Lua config (`hyprland.lua`)
+- [Hyprland](https://hyprland.org/)
 - [Quickshell](https://quickshell.outfoxxed.me/)
-- [pywal](https://github.com/dylanaraps/pywal) (`wal`)
-- `awww` or `swww` (wallpaper daemon)
+- [pywal](https://github.com/dylanaraps/pywal)
+- `awww` (wallpaper daemon)
 - `cliphist` + `wl-clipboard` (clipboard history)
 - `cava` (audio visualizer)
 - `ffmpeg` (video wallpaper thumbnails/frames)
@@ -97,7 +95,7 @@ config into `~/.config/hypr/colors-wal.lua` on every wallpaper/color
 change — make sure your `hyprland.lua` requires it:
 
 ```lua
-require("colors-wal")
+require("colors-wal.lua")
 ```
 
 ## Wallpapers
