@@ -138,6 +138,25 @@ if [ -f "$KEYBINDS_SRC" ]; then
   c_yellow "already have."
 fi
 
+# ---- cava config ----
+CAVA_SRC="$SRC_DIR/cava-config-rice"
+CAVA_DEST_DIR="$HOME/.config/cava"
+CAVA_DEST="$CAVA_DEST_DIR/cava-config-rice"
+
+if [ -f "$CAVA_SRC" ]; then
+  mkdir -p "$CAVA_DEST_DIR"
+  if [ -f "$CAVA_DEST" ]; then
+    c_yellow "Existing cava-config-rice found — leaving it alone."
+    c_yellow "(Compare against $CAVA_SRC if the visualizer looks wrong.)"
+  else
+    cp "$CAVA_SRC" "$CAVA_DEST"
+    c_green "cava config installed to $CAVA_DEST"
+  fi
+else
+  c_yellow "cava-config-rice not found in the repo — the audio visualizer"
+  c_yellow "widget will fail silently without it. See the README."
+fi
+
 echo
 c_green "Done."
 echo "Start it with:"
