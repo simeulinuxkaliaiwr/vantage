@@ -23,7 +23,7 @@ c_red() { printf '\033[31m%s\033[0m\n' "$1"; }
 echo "Installing to: $DEST_DIR"
 echo
 
-REQUIRED=(qs wal cliphist wl-copy cava ffmpeg foot python3)
+REQUIRED=(qs wal cliphist wl-clipboard cava ffmpeg foot python3)
 MISSING=()
 
 for bin in "${REQUIRED[@]}"; do
