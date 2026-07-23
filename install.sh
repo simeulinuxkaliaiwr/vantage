@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# install.sh — installs Vantage into ~/.config/quickshell/yourusername/,
+# install.sh — installs Vantage into ~/.config/quickshell/vantage/,
 # checks dependencies, and optionally wires up compositor blur in
 # hyprland.lua. Safe to re-run: existing installs and hyprland.lua
 # are always backed up before being touched. Keybinds are never
@@ -23,7 +23,7 @@ c_red() { printf '\033[31m%s\033[0m\n' "$1"; }
 echo "Installing to: $DEST_DIR"
 echo
 
-REQUIRED=(qs wal cliphist wl-clipboard cava ffmpeg foot python3)
+REQUIRED=(qs wal cliphist wl-copy cava ffmpeg foot python3)
 MISSING=()
 
 for bin in "${REQUIRED[@]}"; do
@@ -52,6 +52,28 @@ fi
 if ! command -v hyprlock >/dev/null 2>&1; then
   c_yellow "hyprlock not found — the power menu's Lock button won't work unless"
   c_yellow "you edit the lock command in BarMorph.qml (powerContent) to your locker."
+  echo
+fi
+
+# Qt5Compat.GraphicalEffects is a QML module, not a binary, so we can't
+# command -v it — this is a best-effort search across common plugin
+# paths. Package names vary a lot by distro (qt6-5compat on Arch,
+# qml6-module-qt5compat-graphicaleffects on Debian/Ubuntu, etc), so
+# this only warns and never blocks the install.
+QT5COMPAT_FOUND=0
+for p in /usr/lib/qt6/qml/Qt5Compat /usr/lib*/qt6/qml/Qt5Compat \
+         /usr/lib/x86_64-linux-gnu/qt6/qml/Qt5Compat \
+         /usr/share/qt6/qml/Qt5Compat; do
+  if [ -d "$p" ]; then QT5COMPAT_FOUND=1; break; fi
+done
+
+if [ "$QT5COMPAT_FOUND" -eq 0 ]; then
+  c_yellow "Couldn't confirm Qt5Compat.GraphicalEffects is installed (needed by"
+  c_yellow "the wallpaper picker's OpacityMask). If Vantage fails to load with"
+  c_yellow "'module \"Qt5Compat.GraphicalEffects\" is not installed', install:"
+  c_yellow "  Arch:           qt6-5compat"
+  c_yellow "  Debian/Ubuntu:  qml6-module-qt5compat-graphicaleffects"
+  c_yellow "  Fedora:         qt6-qt5compat"
   echo
 fi
 
@@ -84,7 +106,10 @@ if [ ! -f "$HYPR_CONF" ]; then
   c_yellow "No hyprland.lua found at $HYPR_CONF — skipping compositor blur setup."
   c_yellow "See the README's 'Compositor blur' section to add it manually."
 else
-  if grep -qF "$BLUR_MARKER_BEGIN" "$HYPR_CONF"; then
+  # "--" tells grep "no more options follow" — without it, a pattern
+  # starting with "--" (like our marker) gets parsed as a flag and
+  # grep errors out instead of searching.
+  if grep -qF -- "$BLUR_MARKER_BEGIN" "$HYPR_CONF"; then
     c_green "hyprland.lua already has the Vantage blur block — leaving it alone."
   else
     echo "Vantage needs a blur layer_rule block in hyprland.lua for the"
