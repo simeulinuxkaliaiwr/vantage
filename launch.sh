@@ -33,4 +33,4 @@ chmod +x "$SCRIPT_DIR/scripts/apply-wallpaper.sh" \
          "$SCRIPT_DIR/scripts/restore-wallpaper.sh" \
          "$SCRIPT_DIR/scripts/wallpaper-thumbnail.sh"
 
-exec qs -c rice-git
+exec qs -c vantage
