@@ -14,9 +14,9 @@ Variants {
         property var modelData
         screen: modelData
         anchors.left: true
+        anchors.top: true
         anchors.bottom: true
         margins.left: 1
-        margins.bottom: 180
         color: "transparent"
         WlrLayershell.layer: WlrLayer.Bottom
         WlrLayershell.namespace: "quickshell-dock"
