@@ -162,3 +162,7 @@ those don't need restarting on a QML edit.
 ## License
 
 MIT
+
+## Credits
+
+- The top-bar layout and design were heavily inspired by this amazing setup by [u/Roeod](https://www.reddit.com/r/unixporn/comments/1uyf3wn/hyprland_fluid/) on r/unixporn.
