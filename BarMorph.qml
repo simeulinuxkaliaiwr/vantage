@@ -319,13 +319,7 @@ Item {
                                 Component.onCompleted: forceActiveFocus()
 
                                 Keys.onPressed: (event) => {
-                                    if (event.key === Qt.Key_Down || event.key === Qt.Key_J) {
-                                        laRoot.selIndex = Math.min(laRoot.selIndex + 1, laRoot.apps.length - 1);
-                                        event.accepted = true;
-                                    } else if (event.key === Qt.Key_Up || event.key === Qt.Key_K) {
-                                        laRoot.selIndex = Math.max(0, laRoot.selIndex - 1);
-                                        event.accepted = true;
-                                    } else if (event.key === Qt.Key_Return || event.key === Qt.Key_Enter) {
+                                    if (event.key === Qt.Key_Return || event.key === Qt.Key_Enter) {
                                         const raw = laRoot.query.trim();
                                         if (raw.startsWith(">")) {
                                             Quickshell.execDetached(["sh", "-c", raw.slice(1).trim()]);
