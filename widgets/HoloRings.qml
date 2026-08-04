@@ -1,7 +1,7 @@
 import Quickshell
 import Quickshell.Wayland
 import QtQuick
-import "." as Local
+import ".." as Local
 
 // Purely decorative rotating rings widget for the top-left corner.
 Variants {

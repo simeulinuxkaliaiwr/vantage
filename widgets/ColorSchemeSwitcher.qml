@@ -3,7 +3,7 @@ import Quickshell.Wayland
 import Quickshell.Io
 import QtQuick
 import QtQuick.Layouts
-import "." as Local
+import ".." as Local
 
 // auto/dark/light popup — re-runs pywal against the current wallpaper
 // with the -l flag and repropagates colors everywhere.

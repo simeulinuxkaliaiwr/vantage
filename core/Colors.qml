@@ -3,7 +3,6 @@ pragma Singleton
 import Quickshell
 import Quickshell.Io
 import QtQuick
-import "." as Local
 
 // Reads ~/.cache/wal/colors.json (pywal) and exposes the palette
 // as reactive QML properties, plus the fixed layout tokens for the

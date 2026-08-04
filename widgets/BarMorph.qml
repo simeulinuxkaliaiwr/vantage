@@ -5,7 +5,7 @@ import Quickshell.Services.Pipewire
 import QtQuick
 import QtQuick.Layouts
 import Qt5Compat.GraphicalEffects
-import "." as Local
+import ".." as Local
 
 // Panel that grows out of a tiny point where the bar pill was,
 // rather than just popping open on top of it. Sequence:

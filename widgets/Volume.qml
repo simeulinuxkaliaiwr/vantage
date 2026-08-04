@@ -1,7 +1,7 @@
 import Quickshell
 import Quickshell.Services.Pipewire
 import QtQuick
-import "." as Local
+import ".." as Local
 
 // Minimal volume readout: icon + percentage. Scroll to adjust, click
 // to mute. Uses the native Pipewire service instead of polling an

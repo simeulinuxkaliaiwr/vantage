@@ -3,7 +3,7 @@ import Quickshell.Wayland
 import Quickshell.Io
 import QtQuick
 import QtQuick.Layouts
-import "." as Local
+import ".." as Local
 
 // Popup for the rice's visual mode.
 //   normal  — everything visible (bar + desktop widgets)

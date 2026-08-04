@@ -1,18 +1,18 @@
-singleton Colors 1.0 Colors.qml
-singleton AppState 1.0 AppState.qml
-Bar 1.0 Bar.qml
-BarMorph 1.0 BarMorph.qml
-WallpaperSelector 1.0 WallpaperSelector.qml
-Battery 1.0 Battery.qml
-Volume 1.0 Volume.qml
-ClipboardHistory 1.0 ClipboardHistory.qml
-AppLauncher 1.0 AppLauncher.qml
-ModeSwitcher 1.0 ModeSwitcher.qml
-ColorSchemeSwitcher 1.0 ColorSchemeSwitcher.qml
-PaletteEditor 1.0 PaletteEditor.qml
-SystemMonitor 1.0 SystemMonitor.qml
-BigClock 1.0 BigClock.qml
-AudioVisualizer 1.0 AudioVisualizer.qml
-HoloRings 1.0 HoloRings.qml
-Dock 1.0 Dock.qml
-NotificationCenter 1.0 NotificationCenter.qml
+singleton Colors 1.0 core/Colors.qml
+singleton AppState 1.0 core/AppState.qml
+Bar 1.0 widgets/Bar.qml
+BarMorph 1.0 widgets/BarMorph.qml
+WallpaperSelector 1.0 widgets/WallpaperSelector.qml
+Battery 1.0 widgets/Battery.qml
+Volume 1.0 widgets/Volume.qml
+ClipboardHistory 1.0 widgets/ClipboardHistory.qml
+AppLauncher 1.0 widgets/AppLauncher.qml
+ModeSwitcher 1.0 widgets/ModeSwitcher.qml
+ColorSchemeSwitcher 1.0 widgets/ColorSchemeSwitcher.qml
+PaletteEditor 1.0 widgets/PaletteEditor.qml
+SystemMonitor 1.0 widgets/SystemMonitor.qml
+BigClock 1.0 widgets/BigClock.qml
+AudioVisualizer 1.0 widgets/AudioVisualizer.qml
+HoloRings 1.0 widgets/HoloRings.qml
+Dock 1.0 widgets/Dock.qml
+NotificationCenter 1.0 widgets/NotificationCenter.qml

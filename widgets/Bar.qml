@@ -4,7 +4,7 @@ import Quickshell.Io
 import Quickshell.Hyprland
 import QtQuick
 import QtQuick.Layouts
-import "." as Local
+import ".." as Local
 
 // Floating pill bar. Doesn't span the screen — it's centered and
 // narrower than the display, with real compositor blur behind it

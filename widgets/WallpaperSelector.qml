@@ -3,7 +3,7 @@ import Quickshell.Wayland
 import Quickshell.Io
 import QtQuick
 import QtQuick.Layouts
-import "." as Local
+import ".." as Local
 
 // Full-screen wallpaper grid + big preview, vim keybinds. Separate
 // from the compact picker inside BarMorph — this one is meant for a

@@ -2,7 +2,7 @@ import Quickshell
 import Quickshell.Io
 import Quickshell.Wayland
 import QtQuick
-import "." as Local
+import ".." as Local
 
 // Left-side quick-launch dock, parallelogram buttons with a liquid
 // glass sheen and a pulsing bottom accent line.

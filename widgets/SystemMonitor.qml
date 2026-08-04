@@ -2,7 +2,7 @@ import Quickshell
 import Quickshell.Io
 import Quickshell.Wayland
 import QtQuick
-import "." as Local
+import ".." as Local
 
 // CPU/memory/battery glass card, top-right of the desktop.
 Variants {

@@ -2,7 +2,7 @@ import Quickshell
 import Quickshell.Wayland
 import Quickshell.Io
 import QtQuick
-import "." as Local
+import ".." as Local
 
 Item {
     id: root

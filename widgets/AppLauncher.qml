@@ -1,7 +1,7 @@
 import QtQuick
 import Quickshell
 import Quickshell.Io
-import "." as Local
+import ".." as Local
 
 // Thin IPC entry point — the actual launcher UI lives inside
 // BarMorph.qml (the bar grows into the launcher panel). This file

@@ -4,7 +4,7 @@ import Quickshell.Io
 import QtQuick
 import QtQuick.Window
 import QtQuick.Layouts
-import "." as Local
+import ".." as Local
 
 // Bottom-right desktop clock, translucent card + a progress bar
 // under it that fills up with the current minute's seconds.

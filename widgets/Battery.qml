@@ -1,7 +1,7 @@
 import Quickshell
 import Quickshell.Io
 import QtQuick
-import "." as Local
+import ".." as Local
 
 // Minimal battery readout: just "N%" plus a bolt icon when charging.
 // Reads straight from /sys/class/power_supply, no upower/acpi dependency.

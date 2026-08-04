@@ -2,7 +2,7 @@ import Quickshell
 import Quickshell.Wayland
 import Quickshell.Io
 import QtQuick
-import "." as Local
+import ".." as Local
 
 // cava-driven bar visualizer along the bottom edge. Stops well
 // short of BigClock's position so the two never overlap even at

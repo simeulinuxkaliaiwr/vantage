@@ -3,7 +3,7 @@ import Quickshell.Wayland
 import Quickshell.Io
 import QtQuick
 import QtQuick.Layouts
-import "." as Local
+import ".." as Local
 
 // Visual palette editor. Shows the 16 colors, clicking one opens
 // H/S/L sliders. Changes propagate live through the Colors singleton.
